@@ -16,6 +16,5 @@ class PodberiRu extends StatelessWidget {
       routes: routes,
       initialRoute: '/',
     );
-    //home: MainScreen(),
   }
 }
