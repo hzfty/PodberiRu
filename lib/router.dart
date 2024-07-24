@@ -1,6 +1,6 @@
-import 'package:podberi_ru/mainscreen.dart';
+import 'package:podberi_ru/screens/mainscreen.dart';
 
 final routes = {
-  '/': (context) => const MainScreen(),
+  '/': (context) => MainScreen(),
   // '/coin': (context) => const (),
 };
