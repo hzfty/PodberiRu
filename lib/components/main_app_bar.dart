@@ -20,7 +20,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       flexibleSpace: Padding(
-        padding: const EdgeInsets.only(top: 70.0), // Отступ для текста
+        padding: const EdgeInsets.only(top: 70.0),
         child: Container(
           margin: EdgeInsets.all(15),
           alignment: Alignment.center,

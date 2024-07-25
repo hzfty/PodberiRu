@@ -9,12 +9,12 @@ class MainBody extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: double.infinity, // Ширина прямоугольника
-          height: 150, // Высота прямоугольника
+          width: double.infinity,
+          height: 150,
           margin: EdgeInsets.symmetric(
             vertical: 2,
-          ), // Отступы сверху и снизу в 2 пикселя
-          padding: EdgeInsets.all(15), // Отступы
+          ),
+          padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.white,

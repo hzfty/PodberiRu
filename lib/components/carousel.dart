@@ -5,24 +5,24 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      scrollDirection: Axis.horizontal, // Горизонтальная прокрутка
-      itemCount: 3, // Количество блоков в карусели
+      scrollDirection: Axis.horizontal,
+      itemCount: 3,
       itemBuilder: (context, index) {
         return Container(
-          width: 120, // Ширина прямоугольника
+          width: 120,
           height: 120,
           margin: EdgeInsets.all(3),
           padding: EdgeInsets.all(8),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: pblue, // Цвет блоков в карусели
+            color: pblue,
           ),
           child: Text(
             'Дебетовые карты с бесплатным обслуживанием',
             style: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.bold,
-              color: Colors.white, // Цвет текста
+              color: Colors.white,
               fontFamily: "Geologica",
             ),
           ),
