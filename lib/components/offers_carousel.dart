@@ -22,7 +22,8 @@ class OffersCarousel extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 19,
-                  fontWeight: FontWeight.w800,
+                  fontWeight: FontWeight.w900,
+                  fontFamily: "Geologica",
                 ),
               ),
             ),
