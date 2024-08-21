@@ -8,3 +8,5 @@ const porange = Color(0xFFFB5607);
 const pyellow = Color(0xFFFFBE0B);
 const pdarkgrey = Color(0xFFDFDFDF);
 const pmoredarkgrey = Color(0xFFCACACA);
+const pred = Color(0xFFEF3124);
+const pgreen = Color(0xFF08A652);

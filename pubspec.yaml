@@ -69,6 +69,9 @@ flutter:
     - assets/images/kredt.svg
     - assets/images/microz.svg
     - assets/images/TinkLogo.svg
+    - assets/images/AlfaLogo.svg
+    - assets/images/TinLogo.svg
+    - assets/images/SberLogo.svg
 
   #   - images/a_dot_ham.jpeg
 

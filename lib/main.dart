@@ -12,9 +12,6 @@ class PodberiRu extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'PodberiApp',
-      theme: ThemeData(
-        fontFamily: "Geologica",
-      ),
       routes: routes,
       initialRoute: '/',
     );

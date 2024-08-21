@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:podberi_ru/components/credit_carousel.dart';
 import 'package:podberi_ru/components/offers_carousel.dart';
 import 'package:podberi_ru/components/product_list_types.dart';
+import 'package:podberi_ru/components/select_bank.dart';
 import 'package:podberi_ru/components/stories_carousel.dart';
 
 class MainBody extends StatelessWidget {
@@ -16,6 +17,10 @@ class MainBody extends StatelessWidget {
           OffersCarousel(),
           ProductListTypes(),
           CreditCarousel(),
+          SelectBank(),
+          //DebitCarousel(),
+          //PromoBoard(),
+          //Blog(),
         ],
       ),
     );
