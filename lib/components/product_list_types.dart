@@ -5,7 +5,6 @@ import 'package:podberi_ru/constatns.dart';
 class ProductListTypes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Уникальные тексты для каждого прямоугольника
     final List<String> texts = [
       'Дебетовые карты',
       'Кредитные карты',
@@ -40,7 +39,7 @@ class ProductListTypes extends StatelessWidget {
               child: Text(
                 "Выберите тип продукта",
                 style: TextStyle(
-                  color: Colors.black,
+                  color: pblack,
                   fontSize: 19,
                   fontWeight: FontWeight.w900,
                   fontFamily: "Geologica",
@@ -49,21 +48,17 @@ class ProductListTypes extends StatelessWidget {
             ),
           ),
           SizedBox(height: 17),
-          // Добавляем виджет списка прямоугольников с уникальными текстами и SVG иконками
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: List.generate(texts.length, (index) {
                 return Container(
-                  margin: EdgeInsets.only(
-                      bottom: 6), // Уменьшение расстояния между блоками
-                  padding: EdgeInsets.symmetric(
-                      horizontal: 20), // Отступы для текста и иконки
-                  height: 60, // Высота блоков
+                  margin: EdgeInsets.only(bottom: 6),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  height: 60,
                   decoration: BoxDecoration(
                     color: pblue,
-                    borderRadius:
-                        BorderRadius.circular(10), // Закругление краев
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

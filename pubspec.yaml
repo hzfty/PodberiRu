@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.10+1
+  carousel_slider: ^4.1.1
   
   
 dev_dependencies:
@@ -67,6 +68,7 @@ flutter:
     - assets/images/biss.svg
     - assets/images/kredt.svg
     - assets/images/microz.svg
+    - assets/images/TinkLogo.svg
 
   #   - images/a_dot_ham.jpeg
 
