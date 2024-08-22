@@ -104,6 +104,16 @@ class _CarouselState extends State<Carousel> {
                         ),
                       ),
                       Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: Image.asset(
+                          'assets/images/tink.png',
+                          width: 210,
+                          height: 140,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Positioned(
                         bottom: 20,
                         left: 20,
                         child: Text(
@@ -114,16 +124,6 @@ class _CarouselState extends State<Carousel> {
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
                           ),
-                        ),
-                      ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Image.asset(
-                          'assets/images/tink.png',
-                          width: 210,
-                          height: 140,
-                          fit: BoxFit.cover,
                         ),
                       ),
                     ],

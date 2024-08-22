@@ -5,20 +5,19 @@ class PromoBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width, // ширина по всей области экрана
-      height: 360, // фиксированная высота
+      width: MediaQuery.of(context).size.width,
+      height: 360,
       margin: EdgeInsets.symmetric(vertical: 2),
       decoration: BoxDecoration(
         color: pwhite,
-        borderRadius: BorderRadius.circular(20), // закругленные края
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Stack(
         children: [
           Positioned(
-            top:
-                125, // Сдвиг вниз, чтобы оранжевый фон захватил часть белого квадрата
-            left: -50, // Расширение эллипса влево за границы белого квадрата
-            right: -50, // Расширение эллипса вправо за границы белого квадрата
+            top: 125,
+            left: -50,
+            right: -50,
             bottom: 40,
             child: Container(
               decoration: BoxDecoration(
@@ -26,17 +25,16 @@ class PromoBoard extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
-                  topLeft: Radius.elliptical(500, 150), // Более широкий эллипс
+                  topLeft: Radius.elliptical(500, 150),
                   topRight: Radius.elliptical(500, 150),
                 ),
               ),
             ),
           ),
           Positioned(
-            top:
-                300, // Сдвиг вниз, чтобы оранжевый фон захватил часть белого квадрата
-            left: 0, // Расширение эллипса влево за границы белого квадрата
-            right: 0, // Расширение эллипса вправо за границы белого квадрата
+            top: 300,
+            left: 0,
+            right: 0,
             bottom: 0,
             child: Container(
               decoration: BoxDecoration(
@@ -53,8 +51,7 @@ class PromoBoard extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  top:
-                      30.0, // Отступ заголовка от верхнего края белого квадрата
+                  top: 30.0,
                   left: 32.0,
                   right: 32.0,
                 ),
@@ -73,16 +70,15 @@ class PromoBoard extends StatelessWidget {
               Spacer(),
               Container(
                 child: Image.asset(
-                  'assets/images/sushi.png', // Замените на путь к вашей картинке
-                  fit: BoxFit.cover, // Растянуть картинку на всю ширину
-                  width: MediaQuery.of(context).size.width -
-                      0, // Ширина с учетом отступов
+                  'assets/images/sushi.png',
+                  fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width - 0,
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(
-                  top: 22.0, // Отступ текста от картинки
-                  bottom: 22.0, // Отступ текста от нижнего края белого квадрата
+                  top: 30.0,
+                  bottom: 22.0,
                 ),
                 child: Text(
                   'Подробнее',

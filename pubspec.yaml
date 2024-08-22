@@ -74,6 +74,8 @@ flutter:
     - assets/images/SberLogo.svg
     - assets/images/GazprLogo.svg
     - assets/images/sushi.png
+    - assets/images/news1.png
+    - assets/images/news2.png
 
   #   - images/a_dot_ham.jpeg
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:podberi_ru/components/blog_carousel.dart';
 import 'package:podberi_ru/components/credit_carousel.dart';
 import 'package:podberi_ru/components/debit_carousel.dart';
 import 'package:podberi_ru/components/offers_carousel.dart';
@@ -22,7 +23,7 @@ class MainBody extends StatelessWidget {
           SelectBank(),
           DebitCarousel(),
           PromoBoard(),
-          //Blog(),
+          BlogCarousel(),
         ],
       ),
     );
