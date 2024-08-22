@@ -73,6 +73,7 @@ flutter:
     - assets/images/TinLogo.svg
     - assets/images/SberLogo.svg
     - assets/images/GazprLogo.svg
+    - assets/images/sushi.png
 
   #   - images/a_dot_ham.jpeg
 
