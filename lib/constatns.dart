@@ -10,3 +10,4 @@ const pdarkgrey = Color(0xFFDFDFDF);
 const pmoredarkgrey = Color(0xFFCACACA);
 const pred = Color(0xFFEF3124);
 const pgreen = Color(0xFF08A652);
+const pgaz = Color(0xFF476BF0);

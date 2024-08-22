@@ -7,8 +7,7 @@ class SelectBank extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height:
-          266, // Увеличиваем высоту контейнера, чтобы учесть текст "Все банки"
+      height: 266,
       margin: EdgeInsets.symmetric(
         vertical: 2,
       ),
@@ -35,7 +34,7 @@ class SelectBank extends StatelessWidget {
           ),
           SizedBox(height: 17),
           BanksCarousel(),
-          SizedBox(height: 15), // Отступ между каруселью и текстом "Все банки"
+          SizedBox(height: 15),
           Center(
             child: Text(
               "Все банки",
@@ -54,11 +53,10 @@ class SelectBank extends StatelessWidget {
 }
 
 class BanksCarousel extends StatelessWidget {
-  // Список данных для каждого слайда
   final List<Map<String, String>> bankItems = [
     {
-      'image': 'assets/images/SberLogo.svg', // Путь к SVG изображению
-      'text': 'Сбербанк', // Текст
+      'image': 'assets/images/SberLogo.svg',
+      'text': 'Сбербанк',
     },
     {
       'image': 'assets/images/TinLogo.svg',
@@ -73,23 +71,21 @@ class BanksCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 140, // Высота блока
+      height: 135,
       child: PageView.builder(
         controller: PageController(
-          viewportFraction: 0.38,
+          viewportFraction: 0.35,
           initialPage: 1,
-        ), // Отображение со второго слайда
-        itemCount: bankItems.length, // Количество слайдов
+        ),
+        itemCount: bankItems.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: 3.0), // Расстояние между блоками
+            padding: const EdgeInsets.symmetric(horizontal: 3.0),
             child: Container(
               width: 140,
               height: 140,
               decoration: BoxDecoration(
-                color: _getBlockColor(
-                    index), // Индивидуальный цвет для каждого блока
+                color: _getBlockColor(index),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
@@ -98,16 +94,14 @@ class BanksCarousel extends StatelessWidget {
                   Expanded(
                     child: Center(
                       child: SvgPicture.asset(
-                        bankItems[index][
-                            'image']!, // Индивидуальная SVG картинка для каждого блока
+                        bankItems[index]['image']!,
                         height: 78,
                         width: 108,
                       ),
                     ),
                   ),
                   Text(
-                    bankItems[index]
-                        ['text']!, // Индивидуальный текст для каждого блока
+                    bankItems[index]['text']!,
                     style: TextStyle(
                       color: pwhite,
                       fontSize: 12,
@@ -115,9 +109,7 @@ class BanksCarousel extends StatelessWidget {
                       fontFamily: "Geologica",
                     ),
                   ),
-                  SizedBox(
-                      height:
-                          15), // Добавляем отступ снизу, чтобы текст не прилипал к нижнему краю
+                  SizedBox(height: 15),
                 ],
               ),
             ),
@@ -128,7 +120,6 @@ class BanksCarousel extends StatelessWidget {
   }
 
   Color _getBlockColor(int index) {
-    // Функция для получения индивидуального цвета для каждого блока
     switch (index) {
       case 0:
         return pgreen;

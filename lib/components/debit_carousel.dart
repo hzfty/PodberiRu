@@ -2,7 +2,42 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:podberi_ru/constatns.dart';
 
-class CreditCarousel extends StatelessWidget {
+class SlideData {
+  final Color color;
+  final String title;
+  final String description;
+  final String imagePath;
+  final double rating;
+
+  SlideData({
+    required this.color,
+    required this.title,
+    required this.description,
+    required this.imagePath,
+    required this.rating,
+  });
+}
+
+class DebitCarousel extends StatelessWidget {
+  final List<SlideData> slides = [
+    SlideData(
+      color: pgaz,
+      title: 'Газпромбанк \nУмная UnionPay',
+      description:
+          'Бесплатная\nСнятие без % - 350 000 руб.\nДоставка 1-2 дня\nБез овердрафта',
+      imagePath: 'assets/images/GazprLogo.svg',
+      rating: 4.2,
+    ),
+    SlideData(
+      color: pyellow,
+      title: 'Тинькофф \nДебетовая безлимит',
+      description:
+          'Бесплатная\nСнятие без % - 350 000 руб.\nДоставка 1-2 дня\nБез овердрафта',
+      imagePath: 'assets/images/TinkLogo.svg',
+      rating: 4.5,
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,15 +70,16 @@ class CreditCarousel extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: PageView.builder(
                 controller: PageController(viewportFraction: 0.9),
-                itemCount: 2,
+                itemCount: slides.length,
                 itemBuilder: (context, index) {
+                  final slide = slides[index];
                   return Padding(
                     padding: EdgeInsets.only(right: 6),
                     child: Container(
                       width: 280,
                       height: 190,
                       decoration: BoxDecoration(
-                        color: pyellow,
+                        color: slide.color,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Stack(
@@ -54,7 +90,7 @@ class CreditCarousel extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Тинькофф \nДрайв Кредитная',
+                                  slide.title,
                                   style: TextStyle(
                                     color: pwhite,
                                     fontSize: 14,
@@ -66,7 +102,7 @@ class CreditCarousel extends StatelessWidget {
                                 ),
                                 Spacer(),
                                 Text(
-                                  'Лимит - 1 000 000 руб. \nБез процентов - до 55 дней\nСтоимость - 495 руб./год\nКэшбек - от 1 до 30%',
+                                  slide.description,
                                   style: TextStyle(
                                     color: pwhite,
                                     fontSize: 12,
@@ -92,7 +128,7 @@ class CreditCarousel extends StatelessWidget {
                               ),
                               child: Center(
                                 child: SvgPicture.asset(
-                                  'assets/images/TinkLogo.svg',
+                                  slide.imagePath,
                                   width: 37,
                                   height: 37,
                                 ),
@@ -107,7 +143,7 @@ class CreditCarousel extends StatelessWidget {
                                 Icon(Icons.star, color: pwhite, size: 20),
                                 SizedBox(width: 4),
                                 Text(
-                                  '4.8',
+                                  slide.rating.toString(),
                                   style: TextStyle(
                                     color: pwhite,
                                     fontSize: 20,
