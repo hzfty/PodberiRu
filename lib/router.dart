@@ -1,9 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:podberi_ru/components/splashscreen.dart';
 import 'package:podberi_ru/screens/mainscreen.dart';
 
-final routes = {
+final Map<String, WidgetBuilder> routes = {
   '/': (context) => SplashScreen(),
   '/home': (context) => MainScreen(),
-  //'/blogscreen': (context) => BlogScreen(),
+  // '/blogscreen': (context) => BlogScreen(),
   // '/coin': (context) => const (),
 };

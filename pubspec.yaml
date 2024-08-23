@@ -76,6 +76,12 @@ flutter:
     - assets/images/sushi.png
     - assets/images/news1.png
     - assets/images/news2.png
+    - assets/images/navigator_bar/home.svg
+    - assets/images/navigator_bar/katalog.svg
+    - assets/images/navigator_bar/favorite.svg
+    - assets/images/navigator_bar/bonuses.svg
+    - assets/images/navigator_bar/сomparison.svg
+
 
   #   - images/a_dot_ham.jpeg
 
