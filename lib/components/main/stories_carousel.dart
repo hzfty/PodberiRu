@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constatns.dart';
+import 'package:podberi_ru/constatns.dart';
 
 class StoriesCarousel extends StatelessWidget {
   @override

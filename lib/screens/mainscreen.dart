@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:podberi_ru/components/main_app_bar.dart';
-import 'package:podberi_ru/components/main_body.dart';
+import 'package:podberi_ru/components/main/main_app_bar.dart';
+import 'package:podberi_ru/components/main/main_body.dart';
 import '../constatns.dart';
 
 class MainScreen extends StatefulWidget {
@@ -30,14 +30,13 @@ class _MainScreenState extends State<MainScreen> {
           topRight: Radius.circular(20),
         ),
         child: Container(
-          height: 70, // Высота BottomNavigationBar
+          height: 70,
           child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Padding(
-                  padding: const EdgeInsets.only(
-                      bottom: 6.0), // Расстояние между иконкой и текстом
+                  padding: const EdgeInsets.only(bottom: 6.0),
                   child: SvgPicture.asset(
                     'assets/images/navigator_bar/home.svg',
                     color: _selectedIndex == 0 ? pblue : pblack,
@@ -92,11 +91,11 @@ class _MainScreenState extends State<MainScreen> {
             onTap: _onItemTapped,
             selectedLabelStyle: const TextStyle(
               fontSize: 12,
-              fontFamily: 'Geologica', // Использование локального шрифта
+              fontFamily: 'Geologica',
             ),
             unselectedLabelStyle: const TextStyle(
               fontSize: 12,
-              fontFamily: 'Geologica', // Использование локального шрифта
+              fontFamily: 'Geologica',
             ),
           ),
         ),

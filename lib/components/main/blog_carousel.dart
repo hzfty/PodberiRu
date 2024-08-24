@@ -126,7 +126,7 @@ class BlogCarousel extends StatelessWidget {
               alignment: Alignment.center,
               child: TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pushNamed(context, '/blogscreen');
                 },
                 child: Text(
                   "Читать блог",
