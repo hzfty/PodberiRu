@@ -11,6 +11,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       centerTitle: true,
+      surfaceTintColor: Colors.transparent,
       backgroundColor: pwhite,
       title: Text(
         'Добрый день!',
@@ -18,6 +19,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: pblack,
           fontWeight: FontWeight.bold,
           fontFamily: "Geologica",
+          fontSize: 20,
         ),
       ),
       flexibleSpace: Padding(
@@ -26,29 +28,28 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           margin: EdgeInsets.all(15),
           alignment: Alignment.center,
           child: Container(
-            height: 50, // Фиксированная высота для текстового поля
+            height: 50,
             decoration: BoxDecoration(
-              color: pgrey, // Светло-серый цвет фона
-              borderRadius: BorderRadius.circular(10), // Закругленные края
+              color: pgrey,
+              borderRadius: BorderRadius.circular(10),
             ),
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Введите название продукта',
                 hintStyle: TextStyle(
-                  color: pmoredarkgrey, // Темно-серый цвет для hintText
-                  fontSize: 12.0, // Размер шрифта 12 пунктов
+                  color: pmoredarkgrey,
+                  fontSize: 12.0,
                 ),
-                prefixIcon: null, // Убираем стандартную иконку поиска слева
+                prefixIcon: null,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 13.0),
                   child: SvgPicture.asset(
-                    'assets/images/search.svg', // Путь к вашему SVG-файлу
+                    'assets/images/search.svg',
                     fit: BoxFit.scaleDown,
                   ),
-                ), // Добавляем иконку справа
-                border: InputBorder.none, // Убираем границу
-                contentPadding: EdgeInsets.fromLTRB(
-                    20.0, 13.0, 0.0, 15.0), // Отступ слева для hintText
+                ),
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.fromLTRB(20.0, 12.0, 0.0, 15.0),
               ),
             ),
           ),
