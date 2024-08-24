@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:podberi_ru/components/main/splashscreen.dart';
+import 'package:podberi_ru/screens/splashscreen.dart';
 import 'package:podberi_ru/screens/blogscreen.dart';
 import 'package:podberi_ru/screens/mainscreen.dart';
 

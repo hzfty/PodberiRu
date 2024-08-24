@@ -6,6 +6,9 @@ class BlogCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      margin: EdgeInsets.only(
+        bottom: 2,
+      ),
       height: 356,
       padding: EdgeInsets.only(left: 15),
       decoration: BoxDecoration(

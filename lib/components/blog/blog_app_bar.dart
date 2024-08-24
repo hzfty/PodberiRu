@@ -24,12 +24,11 @@ class BlogAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       leading: IconButton(
         icon: SvgPicture.asset(
-          'assets/images/arrow.svg', // Путь к вашей кастомной иконке
+          'assets/images/arrow.svg',
           fit: BoxFit.scaleDown,
         ),
         onPressed: () {
-          Navigator.of(context)
-              .pop(); // Функция для возврата на предыдущий экран
+          Navigator.of(context).pop();
         },
       ),
       flexibleSpace: Padding(

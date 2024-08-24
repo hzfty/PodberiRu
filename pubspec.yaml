@@ -83,6 +83,7 @@ flutter:
     - assets/images/navigator_bar/сomparison.svg
     - assets/images/search.svg
     - assets/images/arrow.svg
+    - assets/images/news_bunner.png
 
 
   #   - images/a_dot_ham.jpeg

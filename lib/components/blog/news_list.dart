@@ -6,7 +6,7 @@ class NewsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 356,
+      //height: 1025,
       margin: EdgeInsets.symmetric(
         vertical: 2,
       ),
@@ -16,113 +16,60 @@ class NewsList extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container(
-                  width: 220,
-                  height: 230,
-                  decoration: BoxDecoration(
-                    color: pblue,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 135,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.vertical(top: Radius.circular(20)),
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/news1.png"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text(
-                          "Центральный банк\nподнимает ставку, чтобы\nдушить экономику",
-                          style: TextStyle(
-                            color: pwhite,
-                            fontSize: 14,
-                            fontFamily: "Geologica",
-                            height: 1.3,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.left,
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ],
-                  ),
+          ListView.builder(
+            scrollDirection: Axis.vertical,
+            itemCount: 4,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return Container(
+                height: 230,
+                margin: EdgeInsets.only(bottom: 10),
+                decoration: BoxDecoration(
+                  color: pblue,
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                SizedBox(width: 6),
-                Container(
-                  width: 220,
-                  height: 230,
-                  decoration: BoxDecoration(
-                    color: pblue,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 135,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.vertical(top: Radius.circular(20)),
-                          image: DecorationImage(
-                            image: AssetImage("assets/images/news2.png"),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(10)),
+                      child: Image.asset(
+                        'assets/images/news_bunner.png',
+                        height: 155,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(12.0),
-                        child: Text(
-                          "Налоги: Меньше знаешь\nзначит, больше ешь",
-                          style: TextStyle(
-                            color: pwhite,
-                            fontSize: 14,
-                            fontFamily: "Geologica",
-                            height: 1.3,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.left,
-                          maxLines: 3,
-                          overflow: TextOverflow.ellipsis,
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(15),
+                      child: Text(
+                        'Почему нельзя просто взять и повысить зарплаты?',
+                        style: TextStyle(
+                          color: pwhite,
+                          fontFamily: "Geologica",
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          height: 1.3,
                         ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              );
+            },
           ),
-          SizedBox(height: 2),
-          Container(
-            padding: EdgeInsets.only(bottom: 10.0),
-            child: Align(
-              alignment: Alignment.center,
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/blogscreen');
-                },
-                child: Text(
-                  "Читать блог",
-                  style: TextStyle(
-                    color: pblack,
-                    fontSize: 17,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: "Geologica",
-                  ),
-                ),
-              ),
+          SizedBox(height: 13),
+          Text(
+            'Показать больше',
+            style: TextStyle(
+              color: pblack,
+              fontSize: 17,
+              fontWeight: FontWeight.w500,
             ),
           ),
         ],
